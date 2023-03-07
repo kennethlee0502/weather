@@ -3,10 +3,9 @@ const search = document.querySelector(".search-box button");
 const weatherBox = document.querySelector(".weather-box");
 const weatherDetails = document.querySelector(".weather-details");
 const error404 = document.querySelector(".not-found");
-import config from "./config.js";
 
 search.addEventListener("click", () => {
-  const APIKey = config.apiKey;
+  const APIKey = process.env.API_KEY;
   const city = document.querySelector(".search-box input").value;
 
   if (city === "") return;
